@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for Scanaya - Offline PDF Scanner and Document Vault.">
+  <title>Privacy Policy - Scanaya: Offline PDF Scanner</title>
+  <style>
+    :root { color-scheme: dark; --bg:#05100c; --panel:#0b1d16; --ink:#e4f2eb; --muted:#9ebcb0; --accent:#10b981; --accent-2:#34d399; --line:#183e30; }
+    * { box-sizing:border-box; } 
+    body { margin:0; background:radial-gradient(circle at top right,#0e382b 0,transparent 34%),var(--bg); color:var(--ink); font:16px/1.75 Georgia,serif; }
+    main { width:min(800px,calc(100% - 32px)); margin:auto; padding:48px 0 72px; } 
+    a { color:var(--accent-2); text-decoration:underline; text-underline-offset:3px; } 
+    a:hover { color:#6ee7b7; }
+    nav { margin-bottom:40px; font:700 14px Arial,sans-serif; }
+    .eyebrow { color:var(--accent-2); font:700 13px Arial,sans-serif; letter-spacing:.14em; text-transform:uppercase; } 
+    h1 { margin:10px 0 16px; font-size:clamp(38px,7vw,60px); line-height:1.05; letter-spacing:-.04em; color:#f0fdf4; }
+    .lede,p,li { color:var(--muted); } 
+    .lede { font-size:18px; line-height:1.6; color:#d1fae5; margin-bottom:28px; } 
+    section { margin-top:20px; padding:24px 26px; border:1px solid var(--line); border-radius:20px; background:color-mix(in srgb,var(--panel) 94%,transparent); }
+    h2 { margin:0 0 10px; font:700 20px/1.3 Arial,sans-serif; color:#f0fdf4; } 
+    ul { padding-left:22px; margin:8px 0; }
+    li { margin-bottom:6px; }
+    .highlight-box { background:rgba(16,185,129,0.08); border:1px solid rgba(16,185,129,0.25); border-radius:14px; padding:14px 18px; margin-top:14px; font-size:15px; color:#a7f3d0; }
+    footer { margin-top:36px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; font-family:Arial,sans-serif; }
+  </style>
+</head>
+<body>
+<main>
+  <nav><a href="index.html">&larr; Scanaya Legal Hub</a></nav>
+  <div class="eyebrow">100% Offline-First Document Privacy</div>
+  <h1>Privacy Policy</h1>
+  <p class="lede">Effective September 13, 2026. Scanaya is built from the ground up on an absolute privacy-first, zero-cloud principle. Every document scan, handwritten signature, OCR extraction, and PDF generation is executed strictly on your local device and never leaves your physical hardware.</p>
+
+  <section>
+    <h2>1. Zero-Cloud Architecture &amp; No Server Collection</h2>
+    <p>Scanaya operates completely offline. We do not operate external web servers, cloud databases, user tracking systems, or remote storage for this application:</p>
+    <ul>
+      <li>No document pages, pictures, or PDFs are uploaded to any cloud server or third-party host.</li>
+      <li>No document text, search indexes, or file metadata are transmitted over the internet.</li>
+      <li>No account creation, email sign-up, or phone registration is required to use any feature.</li>
+    </ul>
+    <div class="highlight-box"><strong>Summary:</strong> Your sensitive files, receipts, contracts, tax documents, and personal IDs stay exclusively on your smartphone.</div>
+  </section>
+
+  <section>
+    <h2>2. Camera Access &amp; Real-Time Viewfinder</h2>
+    <p>Scanaya requests access to your device's camera (<code>android.permission.CAMERA</code>) solely to provide a real-time viewfinder for document photography and perspective scanning. When you capture a document:</p>
+    <ul>
+      <li>Live camera stream data is analyzed strictly in your device's local volatile memory for real-time edge detection and perspective quad estimation.</li>
+      <li>Camera frames are never recorded in the background or transmitted over any network interface.</li>
+      <li>You can revoke camera permission at any time in Android Settings. Doing so disables camera capture while preserving your ability to import existing images or view saved PDFs.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. On-Device Machine Learning &amp; OCR (Searchable PDFs)</h2>
+    <p>Scanaya features an embedded on-device Optical Character Recognition (OCR) engine powered by Google ML Kit. When you enable the Searchable Sandwich PDF option:</p>
+    <ul>
+      <li>Text recognition runs 100% locally on your device hardware (CPU/GPU/NPU).</li>
+      <li>The extracted vector text layer is injected directly into your generated local PDF document stream without contacting any external network or AI cloud service.</li>
+      <li>The OCR model files are bundled directly inside the app, ensuring uninterrupted, private OCR functionality even in Airplane mode.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. Signature Vault &amp; Digital Signing Privacy</h2>
+    <p>Scanaya includes a local Signature Vault allowing users to draw and reuse handwritten signatures and initials:</p>
+    <ul>
+      <li>Your handwritten signature vector strokes, colors, and timestamps are stored locally in the app's sandboxed private storage.</li>
+      <li>Signatures are never synchronized with any remote cloud or shared with third-party verification brokers.</li>
+      <li>You have complete control to delete any or all saved signatures from your vault at any time.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>5. Cryptographic Audit Certificate (Tamper Verification)</h2>
+    <p>When you generate a DocuSign-style Signing Audit Certificate, Scanaya calculates a cryptographic SHA-256 digest across your document page pixels. This mathematical hash is computed entirely on-device to provide tamper-evident proof of document integrity. The audit record is appended directly to your local PDF file without transmitting verification logs to any remote authority.</p>
+  </section>
+
+  <section>
+    <h2>6. Biometric Authentication &amp; Duress Decoy Vault</h2>
+    <p>Scanaya offers hardware-backed biometric authentication (Fingerprint / Face Unlock via Android's native <code>BiometricPrompt</code>) and PIN protection:</p>
+    <ul>
+      <li>Biometric credentials are authenticated directly by the Android operating system's hardware-isolated Secure Element / Keystore. Scanaya never has access to your raw biometric data.</li>
+      <li>Scanaya provides a secondary Duress Decoy PIN feature (entering PIN <code>0000</code>). This mode opens an empty, sanitized view and is managed purely via local on-device conditional logic.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>7. Document Sharing &amp; Export Control</h2>
+    <p>Documents created in Scanaya are stored in private internal app storage. Files are only exported or shared when you explicitly tap the "Share" or "Save" action. When sharing, Android's standard system share sheet transfers the file to the destination you choose (such as your email, printer, or local file manager). Scanaya has no control over the privacy practices of external apps you choose to share your files with.</p>
+  </section>
+
+  <section>
+    <h2>8. No Third-Party Ads or Telemetry</h2>
+    <p>Scanaya is completely free of third-party advertising SDKs, behavioural tracking frameworks, marketing cookies, and cross-app tracking beacons. We do not sell, rent, monetize, or broker any user data or document information.</p>
+  </section>
+
+  <section>
+    <h2>9. Data Retention &amp; Permanent Deletion</h2>
+    <p>All documents, cached scans, signatures, and preferences remain on your device until you choose to delete them within the app, clear the application storage in Android Settings, or uninstall the app. Uninstalling Scanaya permanently erases all internal scans and vault documents held within the app's sandboxed directory.</p>
+  </section>
+
+  <section>
+    <h2>10. Children's Privacy</h2>
+    <p>Scanaya is a general productivity document scanner utility. We do not knowingly collect, request, or process personal information from children under the age of 13. Since the app functions without accounts or cloud transmissions, no child data is ever harvested or stored.</p>
+  </section>
+
+  <section>
+    <h2>11. Updates to This Policy</h2>
+    <p>We may update this Privacy Policy periodically to reflect new on-device features or regulatory standards. The current version and effective date will always be publicly posted at this address.</p>
+  </section>
+
+  <section>
+    <h2>12. Contact &amp; Developer Information</h2>
+    <p>If you have any questions, feedback, or privacy inquiries regarding Scanaya, please contact us at:</p>
+    <p><strong>Email:</strong> <a href="mailto:quizity2025@gmail.com">quizity2025@gmail.com</a><br><strong>Developer:</strong> Scanaya Team</p>
+  </section>
+
+  <footer>
+    See also the <a href="terms-and-conditions.html">Terms &amp; Conditions</a>.
+  </footer>
+</main>
+</body>
+</html>
